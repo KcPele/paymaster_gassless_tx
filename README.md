@@ -29,8 +29,44 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy on fleek
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[Fleek](https://fleek.xyz) is a platform that allows you to deploy your website on IPFS and host it for free.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This guide will show you how to do deploy your SE-2 build to Fleek.
+
+## ✅ Getting Started
+
+1/ Goto [Fleek app](https://app.fleek.xyz/) to create your own Fleek account
+
+2/ From your local computer, login into Fleek with this command:
+
+```shell
+yarn fleek:login
+```
+
+## 🚀 Deploy to Fleek
+
+To deploy your SE-2 build to Fleek, run this command:
+
+```shell
+yarn fleek:deploy
+```
+
+First time it will ask you to init your project, use these params:
+
+- directory `out`
+- optional build `no`
+- config format `JSON`
+
+Your app will be build then uploaded to Fleek.
+
+For example, this repo is deployed to https://some-flag-rapping.on-fleek.app
+
+## 🚫 Limitations
+
+Note that decentralized storage as IPFS, requires `client only` application (i.e. SPA [`Single Page Application`](https://blogonyourown.com/single-page-application/)) without server side.
+
+With NextJs this is possible by using [Static HTML Export](https://nextjs.org/docs/app/building-your-application/deploying#static-html-export). Nevertheless, note that dynamic routing is not possible, so for example instead of using https://myblog.com/posts/[postId], you will have to use https://myblog.com/posts/?postId=[postId].
+
+For existing application, you may have to modify internal links: between absolute link (like `https://website.io/image.png`), related links (like `image.png` or `./image.png`) and root link (like `/image.png`).
