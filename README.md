@@ -67,7 +67,7 @@ First time it will ask you to init your project, use these params:
 
 Your app will be build then uploaded to Fleek.
 
-For example, this repo is deployed to https://some-flag-rapping.on-fleek.app
+For example, this repo is deployed to https://broad-window-modern.on-fleek.app/
 
 ## 🚫 Limitations
 
