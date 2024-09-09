@@ -50,6 +50,12 @@ yarn fleek:login
 To deploy your SE-2 build to Fleek, run this command:
 
 ```shell
+sh ./init.sh
+```
+
+After the script runs
+
+```shell
 yarn fleek:deploy
 ```
 
