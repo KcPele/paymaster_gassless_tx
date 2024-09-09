@@ -1,8 +1,8 @@
 {
   "sites": [
     {
-      "slug": "<SLUG>",
-      "distDir": "out"
+      "slug": "tall-rose-round",
+      "distDir": "./"
     }
   ]
 }
