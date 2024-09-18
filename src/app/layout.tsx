@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import "@coinbase/onchainkit/styles.css";
 import "./globals.css";
+import OnchainProviders from "@/providers/OnchainProviders";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <OnchainProviders>{children}</OnchainProviders>
       </body>
     </html>
   );
